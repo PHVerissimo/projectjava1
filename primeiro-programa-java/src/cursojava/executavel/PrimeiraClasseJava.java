@@ -10,11 +10,11 @@ import cursojava.classes.Disciplina;
 public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
-		Aluno aluno1 = new Aluno();
-        List<Aluno> alunos = new ArrayList<Aluno>();
-        for(int i = 1; i <= 2; i++) {
+		
+        List<Aluno> alunos = new ArrayList<>();
+        for(int i = 0; i <= 1; i++) {
         	
-        	// TODO Auto-generated method stub
+        	
         	String nome = JOptionPane.showInputDialog("Qual o nome do aluno " + i +" ?");
 //        	String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 //        	String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento do aluno?");
@@ -27,7 +27,7 @@ public class PrimeiraClasseJava {
 //        	String nomeEscola = JOptionPane.showInputDialog("Qual o nome da escola?");
 //        	
         	
-        	
+        	Aluno aluno1 = new Aluno();
         	
 
         	aluno1.setNome(nome);
@@ -41,7 +41,7 @@ public class PrimeiraClasseJava {
 //        	aluno1.setSerieMatriculado(serieMatriculado);
 //        	aluno1.setNomeEscola(nomeEscola);
         	
-        	for(int pos = 1; pos < 2; pos++) {
+        	for(int pos = 0; pos < 1; pos++) {
         		String nomeDisciplina = JOptionPane.showInputDialog("Informe o nome da disciplina " + pos + ":");
         		String notaDisciplina = JOptionPane.showInputDialog("Informe a nota da disciplina " + pos + ":");
         		Disciplina disciplina = new Disciplina();
@@ -66,12 +66,18 @@ public class PrimeiraClasseJava {
         	alunos.add(aluno1);
         }
         
-        for (int pos = 0; pos < alunos.size(); pos++) {
+        for (int pos = 0; pos < 2; pos ++) {
         	Aluno aluno = alunos.get(pos);
         	System.out.println("Aluno:" + pos + " = " + aluno.getNome() );
         	System.out.println("Média do aluno:" + aluno.getMediaNota() + " pontos");
         	System.out.println("Resultado:" + aluno.getAprovado());
+        	for (Disciplina  disc : aluno.getDisciplinas()) {
+				System.out.println("Discplina:" + disc.getDisciplina());
+				System.out.println("Nota:" + disc.getNota());
+			}
         }
+        
+      
         
 	}
 
