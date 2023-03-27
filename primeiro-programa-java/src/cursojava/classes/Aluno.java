@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import cursojava.constantes.StatusAluno;
+
 /*This is my first classes to represent students - this just a test because I removed the credentials Git    */
 public class Aluno {
 	private String nome;
@@ -164,12 +166,12 @@ public class Aluno {
 		double media = this.getMediaNota();
 		if (media >= 50) {
 			if (media >= 70) {
-				return "Aluno esta aprovado";
+				return StatusAluno.APROVADO;
 			} else {
-				return "Aluno está de recuperção";
+				return StatusAluno.RECUPERACAO;
 			}
 		} else {
-			return "Aluno esta reprovado";
+			return StatusAluno.REPROVADO;
 		}
 	}
 
