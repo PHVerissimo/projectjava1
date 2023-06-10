@@ -6,5 +6,5 @@ public class StatusAluno {
 	public static String REPROVADO = "Reprovado";
 	public static String RECUPERACAO = "Recuperação";
 	
-	
+	//teste commit again
 }
